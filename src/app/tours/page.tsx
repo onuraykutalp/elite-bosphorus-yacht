@@ -1,12 +1,8 @@
-import Image from "next/image";
-import Header from "@/components/Header";
-import Slider from "@/components/Slider";
+import BreadcrumbBanner from "@/components/BreadcrumbBanner";
 import { MenuCards } from "@/components/MenuCards";
-import Footer from "@/components/Footer";
-import AboutUs from "@/components/AboutUs";
-export default function Home() {
+import React from "react";
 
-  const menuItems = [
+const menuItems = [
     {
       id: 1,
       name: "Sunset Cruise Tour",
@@ -66,11 +62,17 @@ export default function Home() {
   ];
   
 
+export default function Page() {
   return (
-    <main>
-    <Slider />
-    <MenuCards items={menuItems} />
-    <AboutUs />
-    </main>
+    <>
+    <BreadcrumbBanner
+        title="Bosphorus Yacht Tours"
+        breadcrumb={[
+          { label: "Home", href: "/" },
+          { label: "Tours" },
+        ]}
+      />
+      <MenuCards items={menuItems} />
+    </>
   );
 }
