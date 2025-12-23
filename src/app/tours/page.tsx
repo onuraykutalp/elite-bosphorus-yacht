@@ -10,8 +10,6 @@ const menuItems = [
       slug: "sunset-cruise-tour",
       details: "2 Hours Yacht Tour",
       tour: "Panoramic Bosphorus Route",
-      drinks: "Unlimited Soft Drinks",
-      alcohol: "Optional Alcoholic Drinks",
       service:
         "Enjoy a romantic sunset cruise along the Bosphorus with breathtaking views of Istanbul’s skyline.",
       price: "€ 100",
@@ -24,12 +22,10 @@ const menuItems = [
       slug: "dinner-cruise-tour",
       details: "3 Hours Evening Cruise",
       tour: "Dinner & Entertainment on Board",
-      drinks: "Unlimited Soft Drinks",
-      alcohol: "2 Glasses of Alcohol",
       service:
         "Experience a luxury dinner cruise with delicious meals and night views of the Bosphorus.",
-      price: "€ 120",
-      image: "/services/dinner.jpg",
+      price: "Contact For Price",
+      image: "/services/dinner-1.jpg",
     },
     {
       id: 3,
@@ -38,11 +34,9 @@ const menuItems = [
       slug: "swimming-tour",
       details: "Half Day Yacht Tour",
       tour: "Swimming & Sunbathing Stops",
-      drinks: "Unlimited Soft Drinks",
-      alcohol: "Optional Alcoholic Drinks",
       service:
         "Escape the city and enjoy a refreshing swimming tour in peaceful bays along the Bosphorus.",
-      price: "€ 150",
+      price: "Contact For Price",
       image: "/services/swimming.jpeg",
     },
     {
@@ -52,11 +46,9 @@ const menuItems = [
       slug: "special-celebration-tour",
       details: "Private Yacht Experience",
       tour: "Customized Event Program",
-      drinks: "Unlimited Soft Drinks",
-      alcohol: "Optional Alcohol Packages",
       service:
         "Celebrate your special moments on a private luxury yacht with a fully customized Bosphorus tour.",
-      price: "€ 250",
+      price: "Contact For Price",
       image: "/services/celebration.jpg",
     },
   ];

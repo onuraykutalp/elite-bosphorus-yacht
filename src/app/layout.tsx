@@ -12,6 +12,13 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Elite Bosphorus Yacht",
   description: "Elite Bosphorus Yacht | Yacht Rental",
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 

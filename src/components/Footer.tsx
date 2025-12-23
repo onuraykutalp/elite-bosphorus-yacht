@@ -27,7 +27,7 @@ const footerLinks = [
         label: "info@elitebosphorusyacht.com",
         href: "mailto:info@elitebosphorusyacht.com",
       },
-      { label: "+90 532 000 00 00", href: "tel:+905320000000" },
+      { label: "+90 532 542 98 14", href: "tel:+905325429814" },
       {
         label: "Istanbul, Bosphorus",
         href: "https://maps.google.com",

@@ -15,14 +15,21 @@ const slides: Slide[] = [
         title: "Sunset Yacht Bosphorus Tour",
         description:
           "Experience the magic of Istanbul with a luxury sunset yacht tour on the Bosphorus.",
-        image: "/img/yacht.jpg",
+        image: "/slider/slider-1.jpg",
       },
       {
-        id: 2,
+        id: 3,
         title: "Private Yacht Charter",
         description:
           "Exclusive private yacht rentals for unforgettable moments on the Bosphorus.",
-        image: "/img/yacht-3.jpg",
+        image: "/slider/slider-3.jpg",
+      },
+      {
+        id: 2,
+        title: "Special Celebration",
+        description:
+          "Celebrate your special moments on a private luxury yacht with a fully customized Bosphorus tour.",
+        image: "/slider/slider-2.jpg",
       },
   
 ];

@@ -5,12 +5,6 @@ import emailjs from "@emailjs/browser";
 // import ReCAPTCHA from "react-google-recaptcha";
 import { motion, AnimatePresence } from "framer-motion";
 
-/**
- * Modernized, elegant tour detail with glassmorphism, better spacing,
- * vibrant interactivity. Deniz/okyanus tonlarında renklerle yeniden düzenlendi.
- * Use tailwindcss v3+ and framer-motion v7+ for this UI.
- */
-
 export default function TourDetail({ tour }: { tour: any }) {
   const [activeImage, setActiveImage] = useState(tour.images?.[0] || tour.image);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,10 +44,6 @@ export default function TourDetail({ tour }: { tour: any }) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // if (!captchaValue) {
-    //   alert("Please verify that you are not a robot.");
-    //   return;
-    // }
 
     setSending(true);
 
@@ -401,7 +391,7 @@ export default function TourDetail({ tour }: { tour: any }) {
 
             <div className="mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-cyan-700 mb-2 flex items-center">
-                <span className="mr-1">🍽️</span> <span>{tour.menu.title}</span>
+                <span className="mr-1">🎭</span> <span>{tour.menu.title}</span>
               </h2>
               <div className="bg-white/60 glass-box border border-gray-100 rounded-2xl p-5 shadow-md">
                 <ul className="space-y-2 pt-1">
@@ -412,22 +402,8 @@ export default function TourDetail({ tour }: { tour: any }) {
                   ))}
                 </ul>
               </div>
-            </div>
-
-            <div className="mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold text-sky-700 mb-2 flex items-center">
-                <span className="mr-2">🎭</span> <span>{tour.program.title}</span>
-              </h2>
-              <div className="bg-white/60 glass-box border border-gray-100 rounded-2xl p-5 shadow-md">
-                <ul className="space-y-2 pt-1">
-                  {tour.program.items.map((item: string, index: number) => (
-                    <li key={index} className="flex text-gray-700 text-base items-center">
-                      <span className="text-sky-500 mr-3 text-[1.5em]">•</span> {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            </div>  
+            
           </div>
 
           {/* RIGHT SIDEBAR */}
