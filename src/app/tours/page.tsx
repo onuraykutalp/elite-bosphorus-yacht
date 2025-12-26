@@ -25,7 +25,7 @@ const menuItems = [
       service:
         "Experience a luxury dinner cruise with delicious meals and night views of the Bosphorus.",
       price: "Contact For Price",
-      image: "/services/dinner-1.jpg",
+      image: "/services/dinner-2.jpg",
     },
     {
       id: 3,

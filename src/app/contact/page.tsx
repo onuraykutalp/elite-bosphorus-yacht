@@ -28,7 +28,7 @@ export default function Page() {
                   <Phone className="mt-1 h-6 w-6 text-blue-600" />
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-gray-600">+90 555 000 00 00</p>
+                    <a href="tel:+905325429814" className="text-gray-600">+90 532 542 98 14</a>
                   </div>
                 </div>
 
@@ -52,11 +52,17 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="h-64 overflow-hidden rounded-2xl bg-gray-200">
-              <div className="flex h-full items-center justify-center text-gray-500">
-                Map Placeholder
-              </div>
+            {/* Google Maps Embed - Cibali, Abdülezelpaşa Cd, 34083 Fatih/İstanbul */}
+            <div className="w-full aspect-[4/2] rounded-2xl overflow-hidden border-2 border-blue-100 shadow-lg transition-all hover:shadow-2xl">
+              <iframe
+                title="Bosphorus Marina Map - Cibali"
+                loading="lazy"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6014.1991278655275!2d28.963807287962056!3d41.024114233820675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caba0d522d7f69%3A0xf0841cd8cb11d2f9!2sCibali%2C%20Abd%C3%BClezelpa%C5%9Fa%20Cd%2C%2034083%20Fatih%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1717952177002!5m2!1str!2str"
+                style={{ border: 0, width: '100%', height: '100%' }}
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+              />
             </div>
           </div>
 
@@ -69,7 +75,7 @@ export default function Page() {
                 <label className="mb-2 block text-sm font-medium">Full Name</label>
                 <input
                   type="text"
-                  placeholder="John Doe"
+                  placeholder="Your Name"
                   className="w-full rounded-xl border px-4 py-3 focus:border-blue-600 focus:outline-none"
                 />
               </div>
