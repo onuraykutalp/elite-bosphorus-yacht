@@ -4,8 +4,31 @@ import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 // import ReCAPTCHA from "react-google-recaptcha";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-export default function TourDetail({ tour }: { tour: any }) {
+export default function TourDetail({ tour, slug }: { tour: any; slug: string }) {
+  const { t, language } = useLanguage();
+  
+  // Get translated tour data
+  const getTranslatedTour = () => {
+    const tourData = t(`tourData.${slug}`);
+    if (tourData && typeof tourData === "object" && !Array.isArray(tourData)) {
+      return {
+        ...tour,
+        title: tourData.title || tour.title,
+        subtitle: tourData.subtitle || tour.subtitle,
+        description: tourData.description || tour.description,
+        duration: tourData.duration || tour.duration,
+        menu: {
+          title: tourData.menuTitle || tour.menu?.title,
+          items: tourData.menuItems || tour.menu?.items || []
+        }
+      };
+    }
+    return tour;
+  };
+  
+  const translatedTour = getTranslatedTour();
   const [activeImage, setActiveImage] = useState(tour.images?.[0] || tour.image);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -331,7 +354,7 @@ export default function TourDetail({ tour }: { tour: any }) {
               transition={{ duration: 0.45 }}
               className="text-4xl md:text-5xl font-extrabold mb-3 text-gradient bg-gradient-to-tr from-teal-500 to-sky-500 bg-clip-text text-transparent drop-shadow-lg"
             >
-              {tour.title}
+              {translatedTour.title}
             </motion.h1>
 
             <motion.h3
@@ -340,7 +363,7 @@ export default function TourDetail({ tour }: { tour: any }) {
               transition={{ duration: 0.50, delay: 0.05 }}
               className="text-2xl md:text-3xl font-semibold mb-6 text-gray-900/70"
             >
-              {tour.subtitle}
+              {translatedTour.subtitle}
             </motion.h3>
 
             {/* Image Carousel */}
@@ -353,7 +376,7 @@ export default function TourDetail({ tour }: { tour: any }) {
               <div className="relative">
                 <img
                   src={activeImage}
-                  alt={`${tour.title} - ${tour.subtitle} - Elite Dinner Cruise`}
+                  alt={`${translatedTour.title} - ${translatedTour.subtitle} - Elite Dinner Cruise`}
                   className="w-full h-[340px] md:h-[440px] object-cover bg-white/40 cursor-zoom-in transition duration-200 ease-in group-hover:brightness-105 group-hover:scale-[1.025]"
                   onClick={() => setIsModalOpen(true)}
                   style={{borderRadius: "22px"}}
@@ -369,7 +392,7 @@ export default function TourDetail({ tour }: { tour: any }) {
                 <button
                   key={index}
                   onClick={() => setActiveImage(img)}
-                  aria-label={`View ${tour.title} image ${index + 1}`}
+                  aria-label={`View ${translatedTour.title} image ${index + 1}`}
                   className={`rounded-xl overflow-hidden border-2 duration-150 min-w-[90px] h-[64px] shadow-md ${
                     activeImage === img
                       ? "border-cyan-500 shadow-sky-100 ring-2 ring-sky-200 scale-105"
@@ -378,7 +401,7 @@ export default function TourDetail({ tour }: { tour: any }) {
                 >
                   <img
                     src={img}
-                    alt={`${tour.title} image ${index + 1}`}
+                    alt={`${translatedTour.title} image ${index + 1}`}
                     className="w-full h-full object-cover"
                   />
                 </button>
@@ -386,7 +409,7 @@ export default function TourDetail({ tour }: { tour: any }) {
             </div>
 
             <p className="text-lg text-gray-700/90 leading-relaxed mb-12 mt-2 px-1">
-              {tour.description}
+              {translatedTour.description}
             </p>
 
             <div className="mb-10">
@@ -395,7 +418,7 @@ export default function TourDetail({ tour }: { tour: any }) {
               </h2>
               <div className="bg-white/60 glass-box border border-gray-100 rounded-2xl p-5 shadow-md">
                 <ul className="space-y-2 pt-1">
-                  {tour.menu.items.map((item: string, index: number) => (
+                  {translatedTour.menu.items.map((item: string, index: number) => (
                     <li key={index} className="flex text-gray-700 text-base items-center">
                       <span className="text-teal-500 mr-3 text-[1.5em]">•</span> {item}
                     </li>
@@ -417,7 +440,7 @@ export default function TourDetail({ tour }: { tour: any }) {
               <div className="space-y-5 text-gray-700 text-base font-medium px-1">
                 <div className="flex items-center justify-between">
                   <span className="flex items-center gap-1 text-[1.04em]">⏱ Duration:</span>
-                  <span className="font-bold text-gray-900">{tour.duration}</span>
+                  <span className="font-bold text-gray-900">{translatedTour.duration}</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="flex items-center gap-1">🍹 Drinks:</span>

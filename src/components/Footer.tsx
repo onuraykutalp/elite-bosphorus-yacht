@@ -1,42 +1,45 @@
+"use client";
 import React from "react";
 import Link from "next/link";
-
-const footerLinks = [
-  {
-    title: "Quick Links",
-    links: [
-      { label: "Home", href: "/" },
-      { label: "Tours", href: "/#tours" },
-      { label: "Contact", href: "/#contact" },
-      { label: "About", href: "/#about" },
-    ],
-  },
-  {
-    title: "Services",
-    links: [
-      { label: "Sunset Cruise", href: "/tours/sunset-cruise-tour" },
-      { label: "Dinner Cruise", href: "/tours/dinner-cruise-tour" },
-      { label: "Swimming Tour", href: "/tours/swimming-tour" },
-      { label: "Special Celebration", href: "/tours/special-celebration-tour" },
-    ],
-  },
-  {
-    title: "Contact",
-    links: [
-      {
-        label: "info@elitebosphorusyacht.com",
-        href: "mailto:info@elitebosphorusyacht.com",
-      },
-      { label: "+90 532 542 98 14", href: "tel:+905325429814" },
-      {
-        label: "Istanbul, Bosphorus",
-        href: "https://maps.google.com",
-      },
-    ],
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
+  
+  const footerLinks = [
+    {
+      titleKey: "footer.quickLinks",
+      links: [
+        { labelKey: "common.home", href: "/" },
+        { labelKey: "common.tours", href: "/#tours" },
+        { labelKey: "common.contact", href: "/#contact" },
+        { labelKey: "common.about", href: "/#about" },
+      ],
+    },
+    {
+      titleKey: "footer.services",
+      links: [
+        { labelKey: "tours.sunsetCruise", href: "/tours/sunset-cruise-tour" },
+        { labelKey: "tours.dinnerCruise", href: "/tours/dinner-cruise-tour" },
+        { labelKey: "tours.swimmingTour", href: "/tours/swimming-tour" },
+        { labelKey: "tours.specialCelebration", href: "/tours/special-celebration-tour" },
+      ],
+    },
+    {
+      titleKey: "footer.contact",
+      links: [
+        {
+          label: "info@elitebosphorusyacht.com",
+          href: "mailto:info@elitebosphorusyacht.com",
+        },
+        { label: "+90 532 542 98 14", href: "tel:+905325429814" },
+        {
+          label: "Istanbul, Bosphorus",
+          href: "https://maps.google.com",
+        },
+      ],
+    },
+  ];
   return (
     <footer className="bg-gray-900 text-gray-200 mt-16">
       <div className="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8">
@@ -49,20 +52,20 @@ export default function Footer() {
               </span>
             </Link>
             <p className="mt-4 max-w-xs text-gray-400 text-sm">
-              Luxury yacht tours & experiences on the beautiful Bosphorus. Unforgettable journeys await!
+              {t("footer.description")}
             </p>
           </div>
 
           {/* Links Columns */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 flex-1">
-            {footerLinks.map((section) => (
-              <div key={section.title}>
+            {footerLinks.map((section, idx) => (
+              <div key={idx}>
                 <h4 className="text-lg font-bold mb-4 text-[#F5F1DC]">
-                  {section.title}
+                  {t(section.titleKey)}
                 </h4>
                 <ul className="space-y-3">
-                  {section.links.map((link) => (
-                    <li key={link.label}>
+                  {section.links.map((link, linkIdx) => (
+                    <li key={linkIdx}>
                       {link.href.startsWith("http") || link.href.startsWith("mailto") || link.href.startsWith("tel") ? (
                         <a
                           href={link.href}
@@ -70,14 +73,14 @@ export default function Footer() {
                           rel="noopener noreferrer"
                           className="hover:text-white transition-colors"
                         >
-                          {link.label}
+                          {link.label || t(link.labelKey)}
                         </a>
                       ) : (
                         <Link
                           href={link.href}
                           className="hover:text-white transition-colors"
                         >
-                          {link.label}
+                          {link.label || t(link.labelKey)}
                         </Link>
                       )}
                     </li>
@@ -90,7 +93,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-10 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
           <span>
-            &copy; {new Date().getFullYear()} Elite Bosphorus Yacht. All rights reserved.
+            &copy; {new Date().getFullYear()} Elite Bosphorus Yacht. {t("footer.copyright")}
           </span>
           <div className="flex space-x-4 mt-3 sm:mt-0">
             <a

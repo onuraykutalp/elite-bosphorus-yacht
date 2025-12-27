@@ -1,19 +1,20 @@
 "use client";
 
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Page() {
+  const { t } = useLanguage();
   return (
     <section className="relative bg-gradient-to-b from-gray-50 to-white py-20">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="mb-16 text-center">
           <h1 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">
-            Contact Us
+            {t("contact.title")}
           </h1>
           <p className="mx-auto max-w-2xl text-gray-600">
-            Plan your Bosphorus yacht tour with us. Reach out for reservations,
-            special requests or private events.
+            {t("common.contactDescription")}
           </p>
         </div>
 
@@ -21,13 +22,13 @@ export default function Page() {
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="rounded-2xl border bg-white p-8 shadow-sm">
-              <h2 className="mb-6 text-2xl font-semibold">Get in Touch</h2>
+              <h2 className="mb-6 text-2xl font-semibold">{t("common.getInTouch")}</h2>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <Phone className="mt-1 h-6 w-6 text-blue-600" />
                   <div>
-                    <p className="font-medium">Phone</p>
+                    <p className="font-medium">{t("common.phone")}</p>
                     <a href="tel:+905325429814" className="text-gray-600">+90 532 542 98 14</a>
                   </div>
                 </div>
@@ -35,7 +36,7 @@ export default function Page() {
                 <div className="flex items-start gap-4">
                   <Mail className="mt-1 h-6 w-6 text-blue-600" />
                   <div>
-                    <p className="font-medium">Email</p>
+                    <p className="font-medium">{t("common.email")}</p>
                     <p className="text-gray-600">info@elitebosphorusyacht.com</p>
                   </div>
                 </div>
@@ -43,9 +44,9 @@ export default function Page() {
                 <div className="flex items-start gap-4">
                   <MapPin className="mt-1 h-6 w-6 text-blue-600" />
                   <div>
-                    <p className="font-medium">Location</p>
+                    <p className="font-medium">{t("common.location")}</p>
                     <p className="text-gray-600">
-                      Istanbul, Turkey – Bosphorus Marina
+                      {t("contact.locationValue")}
                     </p>
                   </div>
                 </div>
@@ -68,32 +69,32 @@ export default function Page() {
 
           {/* Contact Form */}
           <div className="rounded-2xl border bg-white p-8 shadow-sm">
-            <h2 className="mb-6 text-2xl font-semibold">Send Us a Message</h2>
+            <h2 className="mb-6 text-2xl font-semibold">{t("common.sendUsMessage")}</h2>
 
             <form className="space-y-6">
               <div>
-                <label className="mb-2 block text-sm font-medium">Full Name</label>
+                <label className="mb-2 block text-sm font-medium">{t("common.fullName")}</label>
                 <input
                   type="text"
-                  placeholder="Your Name"
+                  placeholder={t("common.yourName")}
                   className="w-full rounded-xl border px-4 py-3 focus:border-blue-600 focus:outline-none"
                 />
               </div>
 
               <div>
-                <label className="mb-2 block text-sm font-medium">Email</label>
+                <label className="mb-2 block text-sm font-medium">{t("common.email")}</label>
                 <input
                   type="email"
-                  placeholder="you@email.com"
+                  placeholder={t("common.yourEmail")}
                   className="w-full rounded-xl border px-4 py-3 focus:border-blue-600 focus:outline-none"
                 />
               </div>
 
               <div>
-                <label className="mb-2 block text-sm font-medium">Message</label>
+                <label className="mb-2 block text-sm font-medium">{t("common.message")}</label>
                 <textarea
                   rows={5}
-                  placeholder="Tell us about your yacht tour request"
+                  placeholder={t("contact.messagePlaceholder")}
                   className="w-full rounded-xl border px-4 py-3 focus:border-blue-600 focus:outline-none"
                 />
               </div>
@@ -103,7 +104,7 @@ export default function Page() {
                 className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
               >
                 <Send className="h-5 w-5" />
-                Send Message
+                {t("common.sendMessage")}
               </button>
             </form>
           </div>

@@ -1,0 +1,201 @@
+{
+  "common": {
+    "home": "Anasayfa",
+    "about": "Hakkımızda",
+    "tours": "Turlar",
+    "contact": "İletişim",
+    "bookNow": "Rezervasyon",
+    "viewTours": "Turlarımızı Gör",
+    "sendMessage": "Mesaj Gönder",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "location": "Konum",
+    "fullName": "Ad Soyad",
+    "message": "Mesaj",
+    "yourName": "Adınız",
+    "yourEmail": "e-posta@adres.com",
+    "getInTouch": "İletişime Geçin",
+    "sendUsMessage": "Bize Mesaj Gönderin",
+    "contactDescription": "Boğaz yat turunuzu bizimle planlayın. Rezervasyonlar, özel istekler veya özel etkinlikler için bize ulaşın.",
+    "contactForPrice": "Fiyat İçin İletişime Geçin",
+    "contactUsForPrice": "Fiyat İçin Bize Ulaşın"
+  },
+  "header": {
+    "menuOpen": "Menüyü Aç",
+    "menuClose": "Menüyü Kapat"
+  },
+  "footer": {
+    "quickLinks": "Hızlı Bağlantılar",
+    "services": "Hizmetler",
+    "contact": "İletişim",
+    "description": "Güzel Boğaz'da lüks yat turları ve deneyimler. Unutulmaz yolculuklar sizi bekliyor!",
+    "copyright": "Tüm hakları saklıdır."
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "description": "Elite Bosphorus Yacht, İstanbul'un ikonik sularında benzersiz, lüks yat deneyimleri sunar. İster göz alıcı bir Boğaz gün batımı turu, ister canlı bir özel kutlama, ya da unutulmaz bir yüzme turu olsun, özverili ekibimiz her yolculuğu büyülü kılar.",
+    "luxuryFleet": "Lüks Yat Filosu:",
+    "luxuryFleetDesc": "Her durum için modern, tam donanımlı yatlar.",
+    "experiencedCrew": "Deneyimli Mürettebat:",
+    "experiencedCrewDesc": "Sorunsuz bir yolculuk için samimi, profesyonel hizmet.",
+    "unforgettableMoments": "Unutulmaz Anlar:",
+    "unforgettableMomentsDesc": "Özel turlar, etkinlikler ve büyülü Boğaz manzaraları."
+  },
+  "tours": {
+    "title": "Hizmetlerimiz",
+    "sunsetCruise": "Gün Batımı Turu",
+    "dinnerCruise": "Akşam Yemeği Turu",
+    "swimmingTour": "Yüzme Turu",
+    "specialCelebration": "Özel Kutlama"
+  },
+  "tourData": {
+    "sunset-cruise-tour": {
+      "title": "Gün Batımı Turu",
+      "subtitle": "Boğaz Manzaralı Gün Batımı Turu",
+      "description": "İstanbul'un nefes kesen silüetiyle birlikte Boğaz boyunca romantik bir gün batımı turunun keyfini çıkarın.",
+      "duration": "2 Saat",
+      "menuTitle": "Gün Batımı Turu Programı",
+      "menuItems": [
+        "Opsiyonel Alkollü İçecekler",
+        "Boğaz Manzarası",
+        "İstanbul Silüeti",
+        "Romantik Gün Batımı",
+        "Muhteşem Manzaralar",
+        "Rahatlatıcı Tur",
+        "Romantik Deneyim"
+      ]
+    },
+    "dinner-cruise-tour": {
+      "title": "Akşam Yemeği Turu",
+      "subtitle": "Boğaz Manzaralı Akşam Yemeği",
+      "description": "Lezzetli yemekler ve Boğaz'ın gece manzaralarıyla lüks bir akşam yemeği turu deneyimi yaşayın.",
+      "duration": "3 Saat",
+      "menuTitle": "Akşam Yemeği Turu Programı",
+      "menuItems": [
+        "Opsiyonel Alkollü İçecekler",
+        "Boğaz Manzarası",
+        "İstanbul Silüeti",
+        "Romantik Gün Batımı",
+        "Muhteşem Manzaralar",
+        "Rahatlatıcı Tur",
+        "Romantik Deneyim"
+      ]
+    },
+    "swimming-tour": {
+      "title": "Yüzme Turu",
+      "subtitle": "Gizli Koylarda Yüzme",
+      "description": "Şehirden kaçın ve Boğaz boyunca huzurlu koylarda ferahlatıcı bir yüzme turunun keyfini çıkarın.",
+      "duration": "Yarım Gün",
+      "menuTitle": "Yüzme Turu Programı",
+      "menuItems": [
+        "Opsiyonel Alkollü İçecekler",
+        "Boğaz Manzarası",
+        "İstanbul Silüeti",
+        "Romantik Gün Batımı",
+        "Muhteşem Manzaralar",
+        "Rahatlatıcı Tur",
+        "Romantik Deneyim"
+      ]
+    },
+    "special-celebration-tour": {
+      "title": "Özel Kutlama",
+      "subtitle": "Doğum Günü, Evlilik Teklifi ve Etkinlikler",
+      "description": "Tamamen özelleştirilmiş bir Boğaz turu ile özel anlarınızı özel bir lüks yatta kutlayın.",
+      "duration": "Özel Yat Deneyimi",
+      "menuTitle": "Özel Kutlama Turu Programı",
+      "menuItems": [
+        "Opsiyonel Alkollü İçecekler",
+        "Boğaz Manzarası",
+        "İstanbul Silüeti",
+        "Romantik Gün Batımı",
+        "Muhteşem Manzaralar",
+        "Rahatlatıcı Tur",
+        "Romantik Deneyim"
+      ]
+    }
+  },
+
+  "menuItems": {
+    "sunset-cruise-tour": {
+      "title": "Gün Batımı Turu",
+      "subtitle": "Boğaz Manzaralı Gün Batımı Turu",
+      "description": "İstanbul'un nefes kesen silüetiyle birlikte Boğaz boyunca romantik bir gün batımı turunun keyfini çıkarın.",
+      "duration": "2 Saat",
+      "menuTitle": "Gün Batımı Turu Programı",
+      "menuItems": [
+        "Opsiyonel Alkollü İçecekler",
+        "Boğaz Manzarası",
+        "İstanbul Silüeti",
+        "Romantik Gün Batımı",
+        "Muhteşem Manzaralar",
+        "Rahatlatıcı Tur",
+        "Romantik Deneyim"
+      ]
+    },
+    "dinner-cruise-tour": {
+      "title": "Akşam Yemeği Turu",
+      "subtitle": "Boğaz Manzaralı Akşam Yemeği",
+      "description": "Lezzetli yemekler ve Boğaz'ın gece manzaralarıyla lüks bir akşam yemeği turu deneyimi yaşayın.",
+      "duration": "3 Saat",
+      "menuTitle": "Akşam Yemeği Turu Programı",
+      "menuItems": [
+        "Opsiyonel Alkollü İçecekler",
+        "Boğaz Manzarası",
+        "İstanbul Silüeti",
+        "Romantik Gün Batımı",
+        "Muhteşem Manzaralar",
+        "Rahatlatıcı Tur",
+        "Romantik Deneyim"
+      ]
+    },
+    "swimming-tour": {
+      "title": "Yüzme Turu",
+      "subtitle": "Gizli Koylarda Yüzme",
+      "description": "Şehirden kaçın ve Boğaz boyunca huzurlu koylarda ferahlatıcı bir yüzme turunun keyfini çıkarın.",
+      "duration": "Yarım Gün",
+      "menuTitle": "Yüzme Turu Programı",
+      "menuItems": [
+        "Opsiyonel Alkollü İçecekler",
+        "Boğaz Manzarası",
+        "İstanbul Silüeti",
+        "Romantik Gün Batımı",
+        "Muhteşem Manzaralar",
+        "Rahatlatıcı Tur",
+        "Romantik Deneyim"
+      ]
+    },
+    "special-celebration-tour": {
+      "title": "Özel Kutlama",
+      "subtitle": "Doğum Günü, Evlilik Teklifi ve Etkinlikler",
+      "description": "Tamamen özelleştirilmiş bir Boğaz turu ile özel anlarınızı özel bir lüks yatta kutlayın.",
+      "duration": "Özel Yat Deneyimi",
+      "menuTitle": "Özel Kutlama Turu Programı",
+      "menuItems": [
+        "Opsiyonel Alkollü İçecekler",
+        "Boğaz Manzarası",
+        "İstanbul Silüeti",
+        "Romantik Gün Batımı",
+        "Muhteşem Manzaralar",
+        "Rahatlatıcı Tur",
+        "Romantik Deneyim"
+      ]
+    }
+  },
+
+  "contact": {
+    "title": "İletişim",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-posta",
+    "locationLabel": "Konum",
+    "locationValue": "İstanbul, Türkiye – Boğaz Marina",
+    "messagePlaceholder": "Yat turu talebiniz hakkında bize bilgi verin"
+  },
+  "bosphorus-yacht-tours": {
+    "title": "Boğaz Yat Turları",
+    "breadcrumb": [
+      { "label": "common.home", "href": "/" },
+      { "label": "common.tours" }
+    ]
+  }
+}
+

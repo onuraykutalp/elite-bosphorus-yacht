@@ -15,13 +15,13 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   return (
     <>
     <BreadcrumbBanner
-        title="Bosphorus Yacht Tours"
+        title="bosphorus-yacht-tours.title"
         breadcrumb={[
-          { label: "Home", href: "/" },
-          { label: "Tours" },
+          { label: "common.home", href: "/" },
+          { label: "common.tours" },
         ]}
       />
-      <TourDetail tour={tour} />
+      <TourDetail tour={tour} slug={slug} />
     </>
   )
 }

@@ -1,0 +1,156 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About Us",
+    "tours": "Tours",
+    "contact": "Contact Us",
+    "bookNow": "Book Now",
+    "viewTours": "View Our Tours",
+    "sendMessage": "Send Message",
+    "phone": "Phone",
+    "email": "Email",
+    "location": "Location",
+    "fullName": "Full Name",
+    "message": "Message",
+    "yourName": "Your Name",
+    "yourEmail": "you@email.com",
+    "getInTouch": "Get in Touch",
+    "sendUsMessage": "Send Us a Message",
+    "contactDescription": "Plan your Bosphorus yacht tour with us. Reach out for reservations, special requests or private events.",
+    "contactForPrice": "Contact For Price",
+    "contactUsForPrice": "Contact Us For Price"
+  },
+  "header": {
+    "menuOpen": "Open Menu",
+    "menuClose": "Close Menu"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "description": "Luxury yacht tours & experiences on the beautiful Bosphorus. Unforgettable journeys await!",
+    "copyright": "All rights reserved."
+  },
+  "about": {
+    "title": "About",
+    "description": "Elite Bosphorus Yacht offers unique, luxurious yacht experiences on the iconic waters of Istanbul. Whether it's a dazzling Bosphorus sunset cruise, a vibrant private celebration, or an unforgettable swimming tour, our dedicated team makes every journey magical.",
+    "luxuryFleet": "Luxury Yacht Fleet:",
+    "luxuryFleetDesc": "Modern, fully-equipped yachts for every occasion.",
+    "experiencedCrew": "Experienced Crew:",
+    "experiencedCrewDesc": "Friendly, professional service for a seamless journey.",
+    "unforgettableMoments": "Unforgettable Moments:",
+    "unforgettableMomentsDesc": "Custom tours, events, and magical Bosphorus views."
+  },
+  "tours": {
+    "title": "Our Services",
+    "sunsetCruise": "Sunset Cruise Tour",
+    "dinnerCruise": "Dinner Cruise Tour",
+    "swimmingTour": "Swimming Tour",
+    "specialCelebration": "Special Celebration"
+  },
+  "menuItems": {
+    "sunset-cruise-tour": {
+      "title": "Sunset Cruise Tour",
+      "subtitle": "Sunset Cruise with Bosphorus View",
+      "duration": "2 Hours"
+    },
+    "dinner-cruise-tour": {
+      "title": "Dinner Cruise Tour",
+      "subtitle": "Dinner with Bosphorus View",
+      "duration": "3 Hours"
+    },
+    "swimming-tour": {
+      "title": "Swimming Tour",
+      "subtitle": "Swim in Hidden Bays",
+      "duration": "Half Day"
+    },
+    "special-celebration-tour": {
+      "title": "Special Celebration",
+      "subtitle": "Birthday, Proposal & Events",
+      "duration": "Private Yacht Experience"
+    }
+  },
+  "tourData": {
+    "sunset-cruise-tour": {
+      "title": "Sunset Cruise Tour",
+      "subtitle": "Sunset Cruise with Bosphorus View",
+      "description": "Enjoy a romantic sunset cruise along the Bosphorus with breathtaking views of Istanbul's skyline.",
+      "duration": "2 Hours",
+      "menuTitle": "Sunset Cruise Tour Program",
+      "menuItems": [
+        "Optional Alcoholic Drinks",
+        "Bosphorus View",
+        "Istanbul's Skyline",
+        "Romantic Sunset",
+        "Beautiful Views",
+        "Relaxing Cruise",
+        "Romantic Experience"
+      ]
+    },
+    "dinner-cruise-tour": {
+      "title": "Dinner Cruise Tour",
+      "subtitle": "Dinner with Bosphorus View",
+      "description": "Experience a luxury dinner cruise with delicious meals and night views of the Bosphorus.",
+      "duration": "3 Hours",
+      "menuTitle": "Dinner Cruise Tour Program",
+      "menuItems": [
+        "Optional Alcoholic Drinks",
+        "Bosphorus View",
+        "Istanbul's Skyline",
+        "Romantic Sunset",
+        "Beautiful Views",
+        "Relaxing Cruise",
+        "Romantic Experience"
+      ]
+    },
+    "swimming-tour": {
+      "title": "Swimming Tour",
+      "subtitle": "Swim in Hidden Bays",
+      "description": "Escape the city and enjoy a refreshing swimming tour in peaceful bays along the Bosphorus.",
+      "duration": "Half Day",
+      "menuTitle": "Swimming Tour Program",
+      "menuItems": [
+        "Optional Alcoholic Drinks",
+        "Bosphorus View",
+        "Istanbul's Skyline",
+        "Romantic Sunset",
+        "Beautiful Views",
+        "Relaxing Cruise",
+        "Romantic Experience"
+      ]
+    },
+    "special-celebration-tour": {
+      "title": "Special Celebration",
+      "subtitle": "Birthday, Proposal & Events",
+      "description": "Celebrate your special moments on a private luxury yacht with a fully customized Bosphorus tour.",
+      "duration": "Private Yacht Experience",
+      "menuTitle": "Special Celebration Tour Program",
+      "menuItems": [
+        "Optional Alcoholic Drinks",
+        "Bosphorus View",
+        "Istanbul's Skyline",
+        "Romantic Sunset",
+        "Beautiful Views",
+        "Relaxing Cruise",
+        "Romantic Experience"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
+    "locationValue": "Istanbul, Turkey – Bosphorus Marina",
+    "messagePlaceholder": "Tell us about your yacht tour request"
+  },
+  "bosphorus-yacht-tours": {
+    "title": "Bosphorus Yacht Tours",
+    "breadcrumb": [
+      { "label": "common.home", "href": "/" },
+      { "label": "common.tours" }
+    ]
+  }
+}
+
+

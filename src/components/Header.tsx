@@ -1,17 +1,19 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-
-const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/#about", label: "About Us" },
-  { href: "/tours", label: "Tours" },
-  { href: "/contact", label: "Contact Us" }
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
+  const { language, setLanguage, t } = useLanguage();
   const [mobileOpen, setMobileOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  
+  const NAV_LINKS = [
+    { href: "/", labelKey: "common.home" },
+    { href: "/#about", labelKey: "common.about" },
+    { href: "/tours", labelKey: "common.tours" },
+    { href: "/contact", labelKey: "common.contact" }
+  ];
 
   // Close mobile menu on route change or ESC press
   useEffect(() => {
@@ -53,21 +55,44 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex space-x-8 items-center">
           {NAV_LINKS.map(link => (
             <Link
               key={link.href}
               href={link.href}
               className="text-white hover:text-pink-200 transition font-medium text-lg"
             >
-              {link.label}
+              {t(link.labelKey)}
             </Link>
           ))}
         </nav>
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center space-x-4">
+          {/* Language Switcher */}
+          <div className="flex items-center space-x-2 bg-white/10 rounded-lg px-2 py-1">
+            <button
+              onClick={() => setLanguage("en")}
+              className={`px-3 py-1 rounded text-sm font-medium transition ${
+                language === "en"
+                  ? "bg-white text-[#081829]"
+                  : "text-white hover:bg-white/20"
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLanguage("tr")}
+              className={`px-3 py-1 rounded text-sm font-medium transition ${
+                language === "tr"
+                  ? "bg-white text-[#081829]"
+                  : "text-white hover:bg-white/20"
+              }`}
+            >
+              TR
+            </button>
+          </div>
           <button className="relative bg-[#80A1BA] text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-[#081829] hover:text-white transition duration-200 cursor-pointer">
-            Book Now
+            {t("common.bookNow")}
           </button>
         </div>
 
@@ -76,7 +101,7 @@ const Header = () => {
           <button
             type="button"
             className="text-white hover:text-pink-300 focus:outline-none"
-            aria-label={mobileOpen ? "Menüyü Kapat" : "Menüyü Aç"}
+            aria-label={mobileOpen ? t("header.menuClose") : t("header.menuOpen")}
             onClick={() => setMobileOpen(prev => !prev)}
           >
             {mobileOpen ? (
@@ -114,7 +139,7 @@ const Header = () => {
             <img src="/logo.png" alt="Logo" className="h-12" />
           </Link>
           <button
-            aria-label="Menüyü Kapat"
+            aria-label={t("header.menuClose")}
             onClick={() => setMobileOpen(false)}
             className="text-white hover:text-pink-300"
             tabIndex={mobileOpen ? 0 : -1}
@@ -137,18 +162,43 @@ const Header = () => {
               onClick={() => setMobileOpen(false)}
               tabIndex={mobileOpen ? 0 : -1}
             >
-              {link.label}
+              {t(link.labelKey)}
             </Link>
           ))}
         </nav>
+        {/* Mobile Language Switcher */}
+        <div className="mt-6 flex items-center justify-center space-x-2 bg-white/10 rounded-lg px-2 py-2">
+          <button
+            onClick={() => setLanguage("en")}
+            className={`px-4 py-2 rounded text-sm font-medium transition ${
+              language === "en"
+                ? "bg-white text-[#081829]"
+                : "text-white hover:bg-white/20"
+            }`}
+            tabIndex={mobileOpen ? 0 : -1}
+          >
+            EN
+          </button>
+          <button
+            onClick={() => setLanguage("tr")}
+            className={`px-4 py-2 rounded text-sm font-medium transition ${
+              language === "tr"
+                ? "bg-white text-[#081829]"
+                : "text-white hover:bg-white/20"
+            }`}
+            tabIndex={mobileOpen ? 0 : -1}
+          >
+            TR
+          </button>
+        </div>
         {/* Mobile Book Now Button */}
-        <div className="mt-10">
+        <div className="mt-6">
           <button
             className="w-full bg-gradient-to-r from-pink-500 via-red-400 to-yellow-400 text-white font-semibold text-lg px-6 py-3 rounded-2xl shadow-xl hover:bg-pink-600 transition"
             tabIndex={mobileOpen ? 0 : -1}
             onClick={() => setMobileOpen(false)}
           >
-            Book Now
+            {t("common.bookNow")}
           </button>
         </div>
         <div className="flex-1"></div>
