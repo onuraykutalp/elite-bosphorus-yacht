@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import Link from "next/link";
 
 type Slide = {
   id: number;
@@ -35,7 +37,21 @@ const slides: Slide[] = [
 ];
 
 export default function Slider() {
+  const { t } = useLanguage();
   const [current, setCurrent] = useState(0);
+  
+  // Get translated slide data
+  const getTranslatedSlide = (slide: Slide) => {
+    const slideData = t(`slider.slides.${slide.id}`);
+    if (slideData && typeof slideData === "object" && !Array.isArray(slideData)) {
+      return {
+        ...slide,
+        title: slideData.title || slide.title,
+        description: slideData.description || slide.description,
+      };
+    }
+    return slide;
+  };
 
   const prevSlide = () => {
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -54,11 +70,13 @@ export default function Slider() {
   return (
     <section className="relative h-[70vh] w-full overflow-hidden">
       {/* Slides */}
-      {slides.map((slide, index) => (
+      {slides.map((slide, index) => {
+        const translatedSlide = getTranslatedSlide(slide);
+        return (
         <div
           key={slide.id}
           className={`absolute inset-0 transition-opacity duration-700 ${
-            index === current ? "opacity-100" : "opacity-0"
+            index === current ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         >
           {/* Background Image */}
@@ -68,39 +86,46 @@ export default function Slider() {
           >
             {/* Overlay */}
             <div className="flex h-full w-full items-center bg-black/50">
-              <div className="container mx-auto px-6 text-white">
+              <div className="container mx-auto px-6 text-white relative z-20">
                 <h2 className="mb-4 max-w-2xl text-3xl font-bold leading-tight md:text-5xl">
-                  {slide.title}
+                  {translatedSlide.title}
                 </h2>
                 <p className="mb-6 max-w-xl text-gray-200 md:text-lg">
-                  {slide.description}
+                  {translatedSlide.description}
                 </p>
 
-                <button className="rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-gray-200">
-                  More Details
-                </button>
+                <Link 
+                  href="/tours" 
+                  className="inline-block rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-gray-200 relative z-30"
+                  style={{ pointerEvents: 'auto' }}
+                >
+                  {t("slider.moreDetails")}
+                </Link>
               </div>
             </div>
           </div>
         </div>
-      ))}
+        );
+      })}
 
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-3 text-black backdrop-blur transition hover:bg-white"
+        className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-3 text-black backdrop-blur transition hover:bg-white z-40"
+        aria-label="Previous slide"
       >
         ‹
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-3 text-black backdrop-blur transition hover:bg-white"
+        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-3 text-black backdrop-blur transition hover:bg-white z-40"
+        aria-label="Next slide"
       >
         ›
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-2">
+      <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-2 z-40">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -108,6 +133,7 @@ export default function Slider() {
             className={`h-2.5 w-2.5 rounded-full transition ${
               index === current ? "bg-white" : "bg-white/50"
             }`}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>

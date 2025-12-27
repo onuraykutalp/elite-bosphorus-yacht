@@ -150,6 +150,23 @@
       { "label": "common.home", "href": "/" },
       { "label": "common.tours" }
     ]
+  },
+  "slider": {
+    "moreDetails": "More Details",
+    "slides": {
+      "1": {
+        "title": "Sunset Yacht Bosphorus Tour",
+        "description": "Experience the magic of Istanbul with a luxury sunset yacht tour on the Bosphorus."
+      },
+      "2": {
+        "title": "Special Celebration",
+        "description": "Celebrate your special moments on a private luxury yacht with a fully customized Bosphorus tour."
+      },
+      "3": {
+        "title": "Private Yacht Charter",
+        "description": "Exclusive private yacht rentals for unforgettable moments on the Bosphorus."
+      }
+    }
   }
 }
 

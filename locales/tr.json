@@ -196,6 +196,23 @@
       { "label": "common.home", "href": "/" },
       { "label": "common.tours" }
     ]
+  },
+  "slider": {
+    "moreDetails": "Daha Fazla Detay",
+    "slides": {
+      "1": {
+        "title": "Gün Batımı Yat Boğaz Turu",
+        "description": "Boğaz'da lüks bir gün batımı yat turu ile İstanbul'un büyüsünü yaşayın."
+      },
+      "2": {
+        "title": "Özel Kutlama",
+        "description": "Tamamen özelleştirilmiş bir Boğaz turu ile özel anlarınızı özel bir lüks yatta kutlayın."
+      },
+      "3": {
+        "title": "Özel Yat Kiralama",
+        "description": "Boğaz'da unutulmaz anlar için özel yat kiralama hizmeti."
+      }
+    }
   }
 }
 
