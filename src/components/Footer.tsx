@@ -64,7 +64,9 @@ export default function Footer() {
                   {t(section.titleKey)}
                 </h4>
                 <ul className="space-y-3">
-                  {section.links.map((link, linkIdx) => (
+                  {section.links.map((link, linkIdx) => {
+                    const linkText = 'label' in link ? link.label : t(link.labelKey);
+                    return (
                     <li key={linkIdx}>
                       {link.href.startsWith("http") || link.href.startsWith("mailto") || link.href.startsWith("tel") ? (
                         <a
@@ -73,18 +75,19 @@ export default function Footer() {
                           rel="noopener noreferrer"
                           className="hover:text-white transition-colors"
                         >
-                          {link.label || t(link.labelKey)}
+                          {linkText}
                         </a>
                       ) : (
                         <Link
                           href={link.href}
                           className="hover:text-white transition-colors"
                         >
-                          {link.label || t(link.labelKey)}
+                          {linkText}
                         </Link>
                       )}
                     </li>
-                  ))}
+                    );
+                  })}
                 </ul>
               </div>
             ))}
