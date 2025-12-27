@@ -22,7 +22,7 @@ const slides: Slide[] = [
         title: "Private Yacht Charter",
         description:
           "Exclusive private yacht rentals for unforgettable moments on the Bosphorus.",
-        image: "/slider/slider-3.jpg",
+        image: "/slider/slider-3.JPG",
       },
       {
         id: 2,
