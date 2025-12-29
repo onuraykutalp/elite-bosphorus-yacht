@@ -91,9 +91,9 @@ const Header = () => {
               TR
             </button>
           </div>
-          <button className="relative bg-[#80A1BA] text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-[#081829] hover:text-white transition duration-200 cursor-pointer">
+          <a href="/tours" className="relative bg-[#80A1BA] text-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-[#081829] hover:text-white transition duration-200 cursor-pointer">
             {t("common.bookNow")}
-          </button>
+          </a>
         </div>
 
         {/* Mobile Menu Icon */}
