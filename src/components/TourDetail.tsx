@@ -442,10 +442,7 @@ export default function TourDetail({ tour, slug }: { tour: any; slug: string }) 
                   <span className="flex items-center gap-1 text-[1.04em]">⏱ Duration:</span>
                   <span className="font-bold text-gray-900">{translatedTour.duration}</span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="flex items-center gap-1">🍹 Drinks:</span>
-                  <span>{tour.drinks}</span>
-                </div>
+                
                 <div className="mt-4 flex items-center justify-between text-cyan-700 text-lg font-bold">
                   <span>Total Price:</span>
                   <span className="text-gradient bg-gradient-to-br from-teal-500 to-sky-600 bg-clip-text text-transparent">

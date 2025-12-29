@@ -30,7 +30,6 @@ export const tours: Record<string, Tour> = {
     menu: {
       title: "Sunset Cruise Tour Program",
       items: [
-        "Optional Alcoholic Drinks",
         "Bosphorus View",
         "Istanbul’s Skyline",
         "Romantic Sunset",
@@ -55,7 +54,6 @@ export const tours: Record<string, Tour> = {
     menu: {
       title: "Dinner Cruise Tour Program",
       items: [
-        "Optional Alcoholic Drinks",
         "Bosphorus View",
         "Istanbul’s Skyline",
         "Romantic Sunset",
@@ -79,7 +77,6 @@ export const tours: Record<string, Tour> = {
     menu: {
       title: "Swimming Tour Program",
       items: [
-        "Optional Alcoholic Drinks",
         "Bosphorus View",
         "Istanbul’s Skyline",
         "Romantic Sunset",
@@ -103,7 +100,6 @@ export const tours: Record<string, Tour> = {
     menu: {
       title: "Special Celebration Tour Program",
       items: [
-        "Optional Alcoholic Drinks",
         "Bosphorus View",
         "Istanbul’s Skyline",
         "Romantic Sunset",
