@@ -18,7 +18,11 @@
     "sendUsMessage": "Send Us a Message",
     "contactDescription": "Plan your Bosphorus yacht tour with us. Reach out for reservations, special requests or private events.",
     "contactForPrice": "Contact For Price",
-    "contactUsForPrice": "Contact Us For Price"
+    "contactUsForPrice": "Contact Us For Price",
+    "tourHighlights": "Tour Highlights",
+    "duration": "Duration",
+    "totalPrice": "Total Price",
+    "clickHereToEnlarge": "Click Here to Enlarge"
   },
   "header": {
     "menuOpen": "Open Menu",
@@ -84,7 +88,18 @@
         "Beautiful Views",
         "Relaxing Cruise",
         "Romantic Experience"
-      ]
+      ],
+      "menu": {
+        "title": "Sunset Cruise Tour Program",
+        "items": [
+          "Bosphorus View",
+          "Istanbul's Skyline",
+          "Romantic Sunset",
+          "Beautiful Views",
+          "Relaxing Cruise",
+          "Romantic Experience"
+        ]
+      }
     },
     "dinner-cruise-tour": {
       "title": "Dinner Cruise Tour",
@@ -99,7 +114,18 @@
         "Beautiful Views",
         "Relaxing Cruise",
         "Romantic Experience"
-      ]
+      ],
+      "menu": {
+        "title": "Dinner Cruise Tour Program",
+        "items": [
+          "Bosphorus View",
+          "Istanbul's Skyline",
+          "Romantic Sunset",
+          "Beautiful Views",
+          "Relaxing Cruise",
+          "Romantic Experience"
+        ]
+      }
     },
     "swimming-tour": {
       "title": "Swimming Tour",
@@ -114,7 +140,18 @@
         "Beautiful Views",
         "Relaxing Cruise",
         "Romantic Experience"
-      ]
+      ],
+      "menu": {
+        "title": "Swimming Tour Program",
+        "items": [
+          "Bosphorus View",
+          "Istanbul's Skyline",
+          "Romantic Sunset",
+          "Beautiful Views",
+          "Relaxing Cruise",
+          "Romantic Experience"
+        ]
+      }
     },
     "special-celebration-tour": {
       "title": "Special Celebration",
@@ -129,7 +166,18 @@
         "Beautiful Views",
         "Relaxing Cruise",
         "Romantic Experience"
-      ]
+      ],
+      "menu": {
+        "title": "Special Celebration Tour Program",
+        "items": [
+          "Bosphorus View",
+          "Istanbul's Skyline",
+          "Romantic Sunset",
+          "Beautiful Views",
+          "Relaxing Cruise",
+          "Romantic Experience"
+        ]
+      }
     }
   },
   "contact": {

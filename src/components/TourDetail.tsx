@@ -110,10 +110,6 @@ export default function TourDetail({ tour, slug }: { tour: any; slug: string }) 
     }
   };
 
-  // Updated color palette:
-  // Instead of rose/fuchsia shades, we use teal, cyan, blue, sky and emeralds for sea/ocean vibes.
-  // Example: from-teal-500 via-cyan-400 to-sky-500, text-cyan-700 etc.
-
   return (
     <>
       <div className="relative max-w-7xl mx-auto px-2 md:px-8 py-10 md:py-16">
@@ -134,7 +130,7 @@ export default function TourDetail({ tour, slug }: { tour: any; slug: string }) 
                 transition={{ duration: 0.25, ease: "easeOut" }}
                 src={activeImage}
                 alt={`${tour.title} - ${tour.subtitle} - Elite Dinner Cruise`}
-                className="max-w-3xl w-full max-h-[90vh] rounded-3xl shadow-2xl object-cover border-8 border-white/30"
+                className="max-w-3xl w-full h-3/4 rounded-3xl shadow-2xl object-cover border-8 border-white/30"
                 onClick={(e) => e.stopPropagation()}
               />
             </motion.div>
@@ -145,7 +141,7 @@ export default function TourDetail({ tour, slug }: { tour: any; slug: string }) 
         <AnimatePresence>
           {isBookingOpen && (
             <motion.div
-              className="fixed inset-0 bg-gradient-to-br from-[#122858]/70 to-[#34d1bf]/30 flex justify-center items-center z-[10000] backdrop-blur-md"
+              className="fixed inset-0 flex justify-center items-center z-[10000] backdrop-blur-md bg-gradient-to-br from-[#122858]/70 to-[#34d1bf]/30 py-8 md:py-16"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -156,24 +152,25 @@ export default function TourDetail({ tour, slug }: { tour: any; slug: string }) 
                 animate={{ y: 0, opacity: 1, scale: 1 }}
                 exit={{ y: 60, opacity: 0, scale: 0.97 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="relative w-full max-w-xl rounded-3xl p-8 sm:p-10 glass-box border border-cyan-300/10 shadow-2xl"
+                className="relative w-full max-w-3xl rounded-3xl p-8 sm:p-12 glass-box border border-cyan-300/10 shadow-2xl flex flex-col justify-between"
+                style={{ minHeight: "min(750px, 95vh)" }}
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
-                  className="absolute top-5 right-5 rounded-full bg-gray-100/80 hover:bg-gray-200 shadow-sm text-gray-700 p-2 transition"
+                  className="absolute top-30 right-5 rounded-full bg-gray-100/80 hover:bg-gray-200 shadow-sm text-gray-700 p-2 transition"
                   onClick={() => setIsBookingOpen(false)}
                   aria-label="Close Reservation Form"
                 >
                   <svg width={22} height={22} fill="none" stroke="currentColor"><path d="M6 6l10 10M16 6L6 16" strokeWidth={2} strokeLinecap="round" /></svg>
                 </button>
 
-                <h2 className="text-4xl font-black mb-5 text-cyan-600 text-center tracking-tight drop-shadow-sm">Reservation</h2>
+                <h2 className="text-4xl font-black mb-5 text-cyan-600 text-center tracking-tight drop-shadow-sm pt-20">Reservation</h2>
                 <p className="text-center text-gray-600 mb-6 text-[1.10rem]">Book your tour securely. We'll confirm your reservation via email.</p>
 
                 {success && (
                   <motion.div
-                    initial={{opacity:0, y:8}}
-                    animate={{opacity:1, y:0}}
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
                     className="mb-4 py-3 px-4 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded-xl text-center font-medium"
                   >
                     &#10003; Reservation request sent successfully!
@@ -181,8 +178,9 @@ export default function TourDetail({ tour, slug }: { tour: any; slug: string }) 
                 )}
 
                 <form
-                  className="w-full bg-white rounded-2xl shadow-xl px-6 py-8 sm:px-10 sm:py-10 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-7 border border-gray-100"
+                  className="w-full flex-1 bg-white rounded-2xl shadow-xl px-8 py-10 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8 border border-gray-100"
                   onSubmit={handleSubmit}
+                  style={{ maxHeight: "none" }}
                 >
                   <div className="flex flex-col gap-2">
                     <label className="font-semibold text-gray-700 text-base mb-1" htmlFor="name">
@@ -246,7 +244,7 @@ export default function TourDetail({ tour, slug }: { tour: any; slug: string }) 
                       className="rounded-lg border border-gray-200 py-2 px-4 focus:outline-none focus:ring-2 focus:ring-teal-400 transition shadow-sm text-[1rem] bg-gray-50 placeholder-gray-300"
                     />
                   </div>
-                  <div className="flex flex-col gap-2 sm:col-span-2">
+                  <div className="md:col-span-2 flex flex-col gap-2">
                     <label className="font-semibold text-gray-700 text-base mb-1" htmlFor="hotelName">
                       Hotel for Pickup
                     </label>
@@ -260,7 +258,7 @@ export default function TourDetail({ tour, slug }: { tour: any; slug: string }) 
                       placeholder="Hotel Name"
                     />
                   </div>
-                  <div className="flex flex-col gap-2 sm:col-span-2">
+                  <div className="md:col-span-2 flex flex-col gap-2">
                     <label className="font-semibold text-gray-700 text-base mb-1" htmlFor="notes">
                       Special Requests
                     </label>
@@ -274,7 +272,7 @@ export default function TourDetail({ tour, slug }: { tour: any; slug: string }) 
                       placeholder="Allergies, birthday, or other requests..."
                     ></textarea>
                   </div>
-                  <div className="grid grid-cols-3 gap-4 sm:col-span-2">
+                  <div className="grid grid-cols-3 gap-4 md:col-span-2">
                     <div className="flex flex-col gap-2">
                       <label className="font-semibold text-gray-700 text-base mb-1" htmlFor="adults">
                         Adults <span className="text-teal-500">*</span>
@@ -322,14 +320,14 @@ export default function TourDetail({ tour, slug }: { tour: any; slug: string }) 
                       />
                     </div>
                   </div>
-                  <div className="sm:col-span-2 bg-gray-50 border border-teal-100 py-3 px-4 rounded-xl text-gray-800 text-base font-medium flex items-center gap-2 mt-2">
+                  <div className="md:col-span-2 bg-gray-50 border border-teal-100 py-3 px-4 rounded-xl text-gray-800 text-base font-medium flex items-center gap-2 mt-2">
                     <span className="inline-flex w-7 h-7 bg-teal-100 text-cyan-700 flex items-center justify-center rounded-full text-xl shadow">🎫</span>
                     Selected Tour: <strong className="ml-1 text-teal-700">{tour.mailTitle}</strong>
                   </div>
                   <button
                     type="submit"
                     disabled={sending}
-                    className="sm:col-span-2 mt-4 bg-gradient-to-tr from-teal-600 to-sky-500 text-white py-3 rounded-xl font-bold text-lg shadow-xl hover:scale-105 active:scale-100 transition transform-gpu disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="md:col-span-2 mt-4 bg-gradient-to-tr from-teal-600 to-sky-500 text-white py-3 mb-10 rounded-xl font-bold text-lg shadow-xl hover:scale-105 active:scale-100 transition transform-gpu disabled:opacity-50 disabled:cursor-not-allowed w-full"
                   >
                     {sending ? (
                       <span className="flex items-center gap-2 justify-center">
@@ -382,7 +380,7 @@ export default function TourDetail({ tour, slug }: { tour: any; slug: string }) 
                   style={{borderRadius: "22px"}}
                 />
                 <span className="absolute bottom-2 right-4 px-3 py-1 rounded-full text-xs bg-black/40 text-white font-semibold backdrop-blur-2xl">
-                  Click to enlarge
+                  {t("common.clickHereToEnlarge")}
                 </span>
               </div>
             </motion.div>
@@ -414,7 +412,7 @@ export default function TourDetail({ tour, slug }: { tour: any; slug: string }) 
 
             <div className="mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-cyan-700 mb-2 flex items-center">
-                <span className="mr-1">🎭</span> <span>{tour.menu.title}</span>
+                <span className="mr-1">🎭</span> <span>{translatedTour.menu.title}</span>
               </h2>
               <div className="bg-white/60 glass-box border border-gray-100 rounded-2xl p-5 shadow-md">
                 <ul className="space-y-2 pt-1">
@@ -436,15 +434,15 @@ export default function TourDetail({ tour, slug }: { tour: any; slug: string }) 
             className="lg:sticky lg:top-24 h-fit z-100"
           >
             <div className="glass-box bg-white/80 backdrop-blur-xl shadow-2xl border border-gray-200 rounded-3xl px-7 py-10">
-              <h3 className="text-2xl font-black text-cyan-700 mb-7 text-center">Tour Highlights</h3>
+              <h3 className="text-2xl font-black text-cyan-700 mb-7 text-center">{t("common.tourHighlights")}</h3>
               <div className="space-y-5 text-gray-700 text-base font-medium px-1">
                 <div className="flex items-center justify-between">
-                  <span className="flex items-center gap-1 text-[1.04em]">⏱ Duration:</span>
+                  <span className="flex items-center gap-1 text-[1.04em]">⏱ {t("common.duration")}:</span>
                   <span className="font-bold text-gray-900">{translatedTour.duration}</span>
                 </div>
                 
                 <div className="mt-4 flex items-center justify-between text-cyan-700 text-lg font-bold">
-                  <span>Total Price:</span>
+                  <span>{t("common.totalPrice")}:</span>
                   <span className="text-gradient bg-gradient-to-br from-teal-500 to-sky-600 bg-clip-text text-transparent">
                     {tour.price}
                   </span>
@@ -454,7 +452,7 @@ export default function TourDetail({ tour, slug }: { tour: any; slug: string }) 
                 onClick={() => setIsBookingOpen(true)}
                 className="mt-8 w-full bg-gradient-to-r from-teal-500 to-sky-500 text-white py-4 rounded-full text-xl font-semibold shadow-xl hover:scale-[1.03] transition-all focus:outline-cyan-700 ring-2 ring-transparent hover:ring-cyan-300"
               >
-                Book Now
+                {t("common.bookNow")}
               </button>
             </div>
           </motion.div>

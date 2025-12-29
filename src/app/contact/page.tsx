@@ -29,7 +29,7 @@ export default function Page() {
                   <Phone className="mt-1 h-6 w-6 text-blue-600" />
                   <div>
                     <p className="font-medium">{t("common.phone")}</p>
-                    <a href="tel:+905325429814" className="text-gray-600">+90 532 542 98 14</a>
+                    <a href="tel:+0(533)0131888" className="text-gray-600">+90 (533) 013 18 88</a>
                   </div>
                 </div>
 

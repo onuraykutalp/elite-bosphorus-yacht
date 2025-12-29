@@ -18,7 +18,11 @@
     "sendUsMessage": "Bize Mesaj Gönderin",
     "contactDescription": "Boğaz yat turunuzu bizimle planlayın. Rezervasyonlar, özel istekler veya özel etkinlikler için bize ulaşın.",
     "contactForPrice": "Fiyat İçin İletişime Geçin",
-    "contactUsForPrice": "Fiyat İçin Bize Ulaşın"
+    "contactUsForPrice": "Fiyat İçin Bize Ulaşın",
+    "tourHighlights": "Tur Özellikleri",
+    "duration": "Süre",
+    "totalPrice": "Toplam Fiyat",
+    "clickHereToEnlarge": "Buraya Tıklayarak Büyüt"
   },
   "header": {
     "menuOpen": "Menüyü Aç",
@@ -125,7 +129,18 @@
         "Muhteşem Manzaralar",
         "Rahatlatıcı Tur",
         "Romantik Deneyim"
-      ]
+      ],
+      "menu": {
+        "title": "Gün Batımı Turu Programı",
+        "items": [
+          "Boğaz Manzarası",
+          "İstanbul Silüeti",
+          "Romantik Gün Batımı",
+          "Muhteşem Manzaralar",
+          "Rahatlatıcı Tur",
+          "Romantik Deneyim"
+        ]
+      }
     },
     "dinner-cruise-tour": {
       "title": "Akşam Yemeği Turu",
@@ -140,7 +155,18 @@
         "Muhteşem Manzaralar",
         "Rahatlatıcı Tur",
         "Romantik Deneyim"
-      ]
+      ],
+      "menu": {
+        "title": "Akşam Yemeği Turu Programı",
+        "items": [
+          "Boğaz Manzarası",
+          "İstanbul Silüeti",
+          "Romantik Gün Batımı",
+          "Muhteşem Manzaralar",
+          "Rahatlatıcı Tur",
+          "Romantik Deneyim"
+        ]
+      }
     },
     "swimming-tour": {
       "title": "Yüzme Turu",
@@ -155,7 +181,18 @@
         "Muhteşem Manzaralar",
         "Rahatlatıcı Tur",
         "Romantik Deneyim"
-      ]
+      ],
+      "menu": {
+        "title": "Yüzme Turu Programı",
+        "items": [
+          "Boğaz Manzarası",
+          "İstanbul Silüeti",
+          "Romantik Gün Batımı",
+          "Muhteşem Manzaralar",
+          "Rahatlatıcı Tur",
+          "Romantik Deneyim"
+        ]
+      }
     },
     "special-celebration-tour": {
       "title": "Özel Kutlama",
@@ -170,7 +207,18 @@
         "Muhteşem Manzaralar",
         "Rahatlatıcı Tur",
         "Romantik Deneyim"
-      ]
+      ],
+      "menu": {
+        "title": "Özel Kutlama Turu Programı",
+        "items": [
+          "Boğaz Manzarası",
+          "İstanbul Silüeti",
+          "Romantik Gün Batımı",
+          "Muhteşem Manzaralar",
+          "Rahatlatıcı Tur",
+          "Romantik Deneyim"
+        ]
+      }
     }
   },
 

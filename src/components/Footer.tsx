@@ -32,7 +32,7 @@ export default function Footer() {
           label: "info@elitebosphorusyacht.com",
           href: "mailto:info@elitebosphorusyacht.com",
         },
-        { label: "+90 532 542 98 14", href: "tel:+905325429814" },
+        { label: "+90 (533) 013 18 88", href: "tel:+05330131888" },
         {
           label: "Istanbul, Bosphorus",
           href: "https://maps.google.com",
@@ -100,7 +100,7 @@ export default function Footer() {
           </span>
           <div className="flex space-x-4 mt-3 sm:mt-0">
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/elitebosphorusyacht"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-pink-500"
@@ -111,7 +111,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://wa.me/905320000000"
+              href="https://wa.me/05330131888"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-green-400"

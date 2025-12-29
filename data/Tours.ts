@@ -48,7 +48,7 @@ export const tours: Record<string, Tour> = {
     duration: "3 Hours",
     service: "Experience a luxury dinner cruise with delicious meals and night views of the Bosphorus.",
     price: "Contact For Price",
-    images: ["/services/dinner-2.jpg","/services/dinner-3.jpg"],
+    images: ["/services/dinner-2.jpg","/services/dinner-3.JPG"],
     description: "Experience a luxury dinner cruise with delicious meals and night views of the Bosphorus.",
 
     menu: {
@@ -71,7 +71,7 @@ export const tours: Record<string, Tour> = {
     duration: "Half Day",
     service: "Escape the city and enjoy a refreshing swimming tour in peaceful bays along the Bosphorus.",
     price: "Contact For Price",
-    images: ["/services/swimming.jpeg"],
+    images: ["/services/swimming.jpeg","/services/ust-geri.jpg","/services/ust-ileri.jpg"],
     description: "Escape the city and enjoy a refreshing swimming tour in peaceful bays along the Bosphorus.",
 
     menu: {
