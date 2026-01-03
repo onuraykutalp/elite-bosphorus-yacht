@@ -87,7 +87,7 @@ export default function Slider() {
             {/* Overlay */}
             <div className="flex h-full w-full items-center bg-black/50">
               <div className="container mx-auto px-6 text-white relative z-20">
-                <h2 className="mb-4 max-w-2xl text-3xl font-bold leading-tight md:text-5xl">
+                <h2 className="mb-4 max-w-2xl text-3xl sm:text-3xl font-bold leading-tight md:text-5xl">
                   {translatedSlide.title}
                 </h2>
                 <p className="mb-6 max-w-xl text-gray-200 md:text-lg">
@@ -111,14 +111,14 @@ export default function Slider() {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-3 text-black backdrop-blur transition hover:bg-white z-40"
+        className="absolute left-4 top-5/6 sm:top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-3 text-black backdrop-blur transition hover:bg-white z-40"
         aria-label="Previous slide"
       >
         ‹
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-3 text-black backdrop-blur transition hover:bg-white z-40"
+        className="absolute right-4 top-5/6 sm:top-1/2 -translate-y-1/2 rounded-full bg-white/80 p-3 text-black backdrop-blur transition hover:bg-white z-40"
         aria-label="Next slide"
       >
         ›

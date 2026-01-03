@@ -15,7 +15,6 @@ const Header = () => {
     { href: "/contact", labelKey: "common.contact" }
   ];
 
-  // Close mobile menu on route change or ESC press
   useEffect(() => {
     // Close menu on click outside
     const handleClickOutside = (event: MouseEvent) => {
