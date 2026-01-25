@@ -23,7 +23,7 @@ export const tours: Record<string, Tour> = {
     mailTitle: "Sunset Cruise Tour",
     duration: "2 Hours",
     service: "Enjoy a romantic sunset cruise along the Bosphorus with breathtaking views of Istanbul’s skyline.",
-    price: "€ 50",
+    price: "€ 60",
     images: ["/services/sunset.jpg","/services/sunset-2.jpg","/services/sunset-3.jpg"],
     description: "Enjoy a romantic sunset cruise along the Bosphorus with breathtaking views of Istanbul’s skyline.",
 
